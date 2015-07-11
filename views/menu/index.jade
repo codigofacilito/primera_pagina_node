@@ -1,0 +1,11 @@
+extends ../layout.jade
+block contenido
+	h2(class='pacifico big blue') Menú
+	p Productos de calidad en tu mesa
+	each product in products
+		div(class="col-md-4 col-sm-6 col-xs-12 inline-block")
+			h3(class="pacifico")= product.title
+			img(src="#{ product.image.url }" class="col-xs-7 col-md-4 no-float")
+			p(style="margin-top:1em;") 
+				small(class="lato small") #{product.pricing}USD
+
